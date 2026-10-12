@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensing Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-title">IML Interface</div>
+
+    <nav class="transport-nav" aria-label="Transport">
+      <button class="transport-btn" data-transport="bluetooth">BLE</button>
+      <button class="transport-btn" data-transport="serial">USB</button>
+    </nav>
+
+    <div class="header-right">
+      <div class="status">
+        <span class="status-dot" id="status-dot" data-state="off"></span>
+        <span class="status-label" id="status-label">DISCONNECTED</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Dashboard toolbar ──────────────────────────────────────────────── -->
+  <div class="dashboard-toolbar">
+    <button class="add-widget-btn" id="add-widget-btn">
+      <span class="add-widget-btn-icon">+</span> Add Widget
+    </button>
+    <button class="reset-btn" id="reset-btn" title="Remove all widgets">Reset</button>
+    <div class="dashboard-toolbar-hint">Drag a header to move · drag a corner to resize</div>
+  </div>
+
+  <!-- ── Dashboard canvas — freeform widget grid ───────────────────────── -->
+  <main class="dashboard-viewport">
+    <div class="dashboard-canvas" id="dashboard-canvas">
+      <div class="dashboard-empty" id="dashboard-empty">
+        <div class="dashboard-empty-label">NO WIDGETS</div>
+        <div class="dashboard-empty-hint">Add Widget to start watching a channel.</div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
