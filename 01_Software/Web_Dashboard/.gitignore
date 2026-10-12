@@ -1,0 +1,10 @@
+# PlatformIO build artifacts
+firmware/.pio/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
